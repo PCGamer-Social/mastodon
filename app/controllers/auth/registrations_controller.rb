@@ -8,11 +8,8 @@ class Auth::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   before_action :set_sessions, only: [:edit, :update]
   before_action :set_instance_presenter, only: [:new, :create, :update]
-<<<<<<< HEAD
   before_action :set_body_classes, only: [:new, :create]
-=======
   prepend_before_action :check_recaptcha, only: [:create]
->>>>>>> 47962b7ed... Add google reCAPTCHA
 
   def destroy
     not_found
