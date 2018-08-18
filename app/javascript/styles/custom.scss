@@ -15,3 +15,7 @@
 .hero-widget__img {
   height: auto !important;
 }
+
+.public-layout .public-account-header__image img[src="/headers/original/missing.png"] {
+  height: 360px;
+}
