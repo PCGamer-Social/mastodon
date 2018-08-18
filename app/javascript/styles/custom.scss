@@ -10,3 +10,8 @@
     margin-bottom: 15px;
   }
 }
+
+.public-layout .public-account-header__image,
+.hero-widget__img {
+  height: auto !important;
+}
