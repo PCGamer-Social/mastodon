@@ -9,6 +9,7 @@ class Auth::RegistrationsController < Devise::RegistrationsController
   before_action :set_sessions, only: [:edit, :update]
   before_action :set_instance_presenter, only: [:new, :create, :update]
   before_action :set_body_classes, only: [:new, :create, :edit, :update]
+  prepend_before_action :check_recaptcha, only: [:create]
 
   def destroy
     not_found
