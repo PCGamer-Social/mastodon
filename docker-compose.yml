@@ -65,6 +65,8 @@ services:
     image: tootsuite/mastodon
     restart: always
     env_file: .env.production
+    environment:
+      - DB_POOL=20
     command: bundle exec sidekiq -c 20
     depends_on:
       - db
