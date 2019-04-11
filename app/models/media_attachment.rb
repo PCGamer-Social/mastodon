@@ -34,7 +34,7 @@ class MediaAttachment < ApplicationRecord
 
   IMAGE_STYLES = {
     original: {
-      pixels: 1_638_400, # 1280x1280px
+      pixels: 8_294_400, # 3840x2160px
       file_geometry_parser: FastGeometryParser,
     },
 
@@ -74,7 +74,7 @@ class MediaAttachment < ApplicationRecord
     },
   }.freeze
 
-  IMAGE_LIMIT = 8.megabytes
+  IMAGE_LIMIT = 20.megabytes
   VIDEO_LIMIT = 40.megabytes
 
   belongs_to :account,          inverse_of: :media_attachments, optional: true
