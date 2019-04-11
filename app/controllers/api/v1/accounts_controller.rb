@@ -84,6 +84,6 @@ class Api::V1::AccountsController < Api::BaseController
   end
 
   def allowed_registrations?
-    Setting.registrations_mode != 'none'
+    Setting.registrations_mode != 'none' || !Setting.registrations_api
   end
 end
